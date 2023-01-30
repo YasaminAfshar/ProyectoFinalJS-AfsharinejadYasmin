@@ -1,0 +1,5 @@
+[
+    {"id": 1, "nombre": "Revista n°1", "imagen": "multimedia/img/revistas/revista1.jpg", "descripcion": "Revista sobre los 100 puntos que debes de conocer para ser un profesional en el crochet", "precio": 640},
+    {"id": 2, "nombre": "Revista n°2", "imagen": "multimedia/img/revistas/revista2.jpg", "descripcion": "Revista sobre todo lo que tenes que aprender del arte del crochet para principiantes", "precio": 700},
+    {"id": 3, "nombre": "Revista n°3", "imagen": "multimedia/img/revistas/revista3.jpg", "descripcion": "Revista para aprender todo sobre los patrones del crochet, puntos y motivos", "precio": 680}
+]

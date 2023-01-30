@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>-Mundo Lana!- Tienda de Lanas 100% orgánica</title>
+    <link rel="icon" href="multimedia/favicon.ico">
+    <script src="https://kit.fontawesome.com/cce09dd0a2.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body id="body">
+    
+    <!--Boton Whatsapp-->
+    <div class="container-btn">
+        <a href="https://wa.me/1123875518?text=Puedes%20consultarme%20sobre%20los%20tratamientos%20por%20este%20medio" target="_blank">
+            <img class="container-btn__wsp" src="multimedia/iconos/whatsapp.svg" alt="Logo whatsapp">
+        </a>
+    </div>
+    <!--Fin Boton Whatsapp-->
+
+
+    <!--Inicio del MODAL creado como un pop up-->
+
+    <div id="popup-container">
+        <div id="popup">
+            <div id="popup-title">
+                <h2 class="animate__animated animate__shakeX animate__slower animate__infinite">¡No te pierdas las PROMOCIONES!</h2>
+                <button id="close" type="button" class="btn-close" aria-label="Close"></button>
+            </div>
+            <p id="popup-text">¡Tenés tiempo hasta el <strong>3 de febrero</strong> para llevarte alguna de las revistas al precio indicado si la compra supera los $5.000!</p>
+            <div id="popup-body" class="row"></div>
+        </div>
+    </div>
+
+    <!--Fin del MODAL creado como un pop up-->
+
+
+
+    <div class="grid template-areas">
+
+        
+        <!--Inicio Navbar-->
+        <nav class="navbar">
+            <div id="tienda">
+                <div class="tienda_texto">
+                    <p class="animate__animated animate__pulse animate__slow animate__infinite">Tienda Online -Lanas 100% orgánicas-</p>
+                </div>
+                <div class="tienda_carrito">
+                    <div id="boton_carrito">
+                        <!--Hecho con JS-->
+                    </div>
+
+                    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+                        <div class="offcanvas-header">
+                            <h5 class="offcanvas-title" id="offcanvasRightLabel">Carrito de compras</h5>
+                            <button type="button" class="btn-close bg-light" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                        </div>
+
+                        <!--ACÁ SE AGREGAN TODOS LOS PRODUCTOS QUE SE VAN SELECCIONANDO-->
+                        <div class="offcanvas-body">
+                            <div id="carrito_head">
+                                <h6>Productos Seleccionados</h6>
+                            </div>
+                            <div id="carrito_compras">
+                                <!--Los productos seleccionados esta armado con JS-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="logo">
+                <img src="multimedia/logo.png" alt="Logo de la tienda Mundo Lana!">
+            </div>
+        </nav>
+
+        <!--Fin Navbar-->
+
+
+
+        <!--Inicio Header-->
+
+        <header id="header">
+            <img src="multimedia/portada1.png" alt="Portada sobre la tienda Mundo Lana! Donde conseguirás lanas de todos los colores 100% orgánicas. Si la suma de tu compra total supera los $2500 se aplica un 25% de descuento">
+        </header>
+
+        <!--Fin Header-->
+
+
+        <!--Inicio Main-->
+
+        <main>
+            <div class="container-fluid">
+
+                <!--PARTE DEL FILTRO-->
+                <section id="principal_section">
+                    
+                    <div class="d-flex" id="busqueda">
+                        <input id="input-search" type="search" placeholder="Búsqueda del producto...">
+                        <button id="btn-search" class="btn"><i class="fa-solid fa-magnifying-glass"></i>Buscar</button>
+                    </div>
+                    
+                    <div id="buttons" class="container-fluid">
+                        <button class="btn button-value" onclick="filterProductos('all')">Todos</button>
+                        <button class="btn button-value" onclick="filterProductos('lanas')">Lanas</button>
+                        <button class="btn button-value" onclick="filterProductos('kit-agujas')">Kit agujas</button>
+                        <button class="btn button-value" onclick="filterProductos('accesorios')">Accesorios</button>
+                    </div>
+                    
+                </section>
+                
+                
+                <!--CATÁLOGO DE PRODUCTOS-->
+
+                <section class="py-3">
+                    <div id="cont_section" class="row justify-content-sm-center">
+                        
+                        <!--Acá ira todos los ARTICLE'S que contendrán los productos detallados en la carpeta de JS archivo productos y main_productos-->
+
+                    </div>
+                </section>
+
+            </div>
+        </main>
+
+        <!--Fin Main-->
+
+
+
+        <!--Inicio Footer-->
+        <footer id="footer">
+            <div class="contenedor-footer">
+                <h5 class="animate__animated animate__headShake animate__slow animate__infinite">Seguinos en nuestras redes</h5>
+                <a href="https://www.facebook.com/" target="_blank">
+                    <img src="multimedia/iconos/facebook.png" alt="Icono de facebook">
+                </a>
+                <a href="https://www.instagram.com/?hl=es-la" target="_blank">
+                    <img src="multimedia/iconos/instagram.png" alt="Icono de Instagram">
+                </a>
+                <a href="https://twitter.com/?lang=es" target="_blank">
+                    <img src="multimedia/iconos/twitter.png" alt="Icono de Twitter">
+                </a>
+            </div>
+
+            <div id="info">
+                <div class="contact-info">
+                    <div class="datos">
+                        <h5>Más información</h5>
+                        <ul>
+                            <li>mundolana@gmail.com</li>
+                            <li>+54 911 23875518</li>
+                            <li>Avenida Santa Fe 1872, Recoleta</li>
+                        </ul>
+                    </div>
+                    <div class="iframe">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.3212857853514!2d-58.396551284806975!3d-34.596036364598625!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccabdfc5dde23%3A0xa2b272d684a25d90!2sAv.%20Santa%20Fe%201872%2C%20C1123AAN%20CABA!5e0!3m2!1ses!2sar!4v1661908230144!5m2!1ses!2sar" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+                <p>Copyright -Información relacionada al copyright-</p>
+            </div>
+        </footer>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.0/dist/sweetalert2.all.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+
+    <!--Scripts de todos los archivos de JS creados-->
+
+    <script src="js/catalogo.js"></script>
+    <script src="js/carrito.js"></script>
+    <script src="js/main_catalogo.js"></script>
+    <script src="js/main_carrito.js"></script>
+
+    <script src="js/barra_filtro.js"></script>
+
+
+</body>
+</html>

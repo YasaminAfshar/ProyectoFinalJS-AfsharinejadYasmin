@@ -435,30 +435,32 @@
             } 
 
     #busqueda {
-        margin: 20px;
+        margin: 10px;
     }
 
-        #busqueda .btn {
+        #btn-search {
             font-family: 'Raleway', sans-serif;
             font-size: 1em;
             text-align: center;
             font-weight: 600;
             color: black;
             background-color: #f03d02e7;
-            width: 170px;
+            width: 120px;
             height: 50px;
+            margin-right: 10px;
         }
 
-            #busqueda .btn:hover {
+            #btn-search:hover {
                 background-color: #f03d0295;
                 transition: bacground-color 1s;
             }
 
-            #busqueda .btn i{
+            #btn-search i{
                 padding: 5px;
+                width: 50px;
             }
 
-            #busqueda #input-search {
+            #input-search {
                 width: 420px;
                 margin-right: 40px;
                 padding: 10px;
@@ -632,6 +634,13 @@
 @media screen and (min-width: 430px) {
     .tienda_texto p {
         font-size: 1.5em;
+    }
+}
+
+
+@media screen and (min-width: 450px) {
+    #busqueda {
+        margin: 20px;
     }
 }
 
